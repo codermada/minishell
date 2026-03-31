@@ -26,7 +26,7 @@
 # include "dictionary.h"
 # include "list.h"
 
-# define PRINT_WELCOME	0
+# define PRINT_WELCOME	1
 
 typedef struct s_exit
 {
