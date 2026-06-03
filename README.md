@@ -7,3 +7,7 @@ A shell program inspired by bash. Coded in C, including the readline library.
 ```bash
 make
 ```
+# Authors
+
+* [nnomenja](https://www.linkedin.com/in/mamenosoa)
+* [toloandr](https://www.linkedin.com/in/toloandr/)
