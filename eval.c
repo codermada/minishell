@@ -27,6 +27,41 @@ static void	preprocess_tokens(char *input, t_list **tokens, t_dict **env_dict)
 	free(expanded);
 }
 
+// #include <stdio.h>
+
+// void print_token_list(t_list *head)
+// {
+//     t_list *tmp = head;
+
+//     printf("===== TOKEN LIST =====\n");
+
+//     while (tmp)
+//     {
+//         t_token *tok = (t_token *)tmp->data;
+
+//         printf("[id:%d | chunk:%d]\n", tmp->id, tmp->chunk_id);
+
+//         printf("  pipe fd: [%d -> %d]\n", tmp->fd[0], tmp->fd[1]);
+
+//         if (tok)
+//         {
+//             printf("  token type: %d\n", tok->type);
+//             printf("  token: \"%s\"\n", tok->token ? tok->token : "(null)");
+//             printf("  token fd: %d\n", tok->fd);
+//         }
+//         else
+//         {
+//             printf("  token: (null)\n");
+//         }
+
+//         printf("----------------------\n");
+
+//         tmp = tmp->next;
+//     }
+
+//     printf("======================\n");
+// }
+
 t_exit	eval(char *input, t_dict **env_dict, int fd_history)
 {
 	t_list	*tokens;
@@ -51,6 +86,7 @@ t_exit	eval(char *input, t_dict **env_dict, int fd_history)
 			return (clean_up(&tokens), (t_exit){e.status, -1});
 	}
 	e.status = run_cmds(tokens);
+	// print_token_list(tokens);
 	e = exit_status(tokens->exit, e.status);
 	clean_up(&tokens);
 	return (e);
