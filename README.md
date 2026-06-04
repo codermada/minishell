@@ -3,6 +3,14 @@ _This project has been created as part of the 42 curriculum by toloandr, nnomenj
 # Description
 A shell program inspired by bash. Coded in C, including the readline library.
 
+# Images
+## Screenshots
+
+![Image 1](images/img1.png)
+![Image 2](images/img2.png)
+![Image 3](images/img3.png)
+![Image 4](images/img4.png)
+
 # Instructions
 ## prerequisites
 * C compiler plus the readline library
